@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  font-family: "Poppins", sans-serif;
+}
+/* end font */
+
+/* general */
+.bg-primary{
+  background-color: #2768FD;
+}
+/* end general */
+
+/* button */
+
+
+/* end button */
+
+
+/* border */
+
+.hover\:border-color-primary:hover{
+  border-color: #2768FD;
+}
+.hover\:border-1:hover {
+  border-width: 1px;
+}
+
+/* end border */
+
+/* hover */
+
+.hover\/color-primary{
+  color: #2768FD;
+}
+
+/* end hover */
+
+
+/* animasi */
+/* end animasi */

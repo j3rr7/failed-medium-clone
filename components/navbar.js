@@ -1,20 +1,13 @@
 
-import { Layout, Menu } from 'antd';
-
-const { Header } = Layout;
-
+import Menu from '../components/common/Menu';
 export default function navbar() {
   return (
     <>
-      <Header>
-        <div className="Logo">
+      <header className="lg:px-16 px-8 bg-white flex flex-wrap items-center py-3 md:py-3 sm:py-6 shadow-md">
+        <div className="container">
+          <Menu/>
         </div>
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-          <Menu.Item key="1">Nav 1</Menu.Item>
-          <Menu.Item key="1">Nav 2</Menu.Item>
-          <Menu.Item key="1">Nav 3</Menu.Item>
-        </Menu>
-      </Header>
+      </header>
     </>
   )
 }

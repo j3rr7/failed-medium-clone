@@ -11,8 +11,15 @@ export default function layout({children}) {
     <>
       <HeadTags/>
       <Navbar/>
-      {/* <Content>{children}</Content>
-      <Footer>Footer</Footer> */}
+      <div className="container">
+        {children}
+      </div>
+      <Footer>Footer</Footer>
+      {/* <div className="container">
+        <Navbar/>
+        {children}
+      </div> */}
+      {/* <Content></Content> */}
     </>
   )
 }
