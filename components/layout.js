@@ -2,7 +2,6 @@ import React from 'react'
 import HeadTags from './headTags'
 import Navbar from './navbar'
 import { Layout } from 'antd';
-
 const { Header, Footer, Content } = Layout;
 
 
@@ -14,12 +13,7 @@ export default function layout({children}) {
       <div className="container">
         {children}
       </div>
-      <Footer>Footer</Footer>
-      {/* <div className="container">
-        <Navbar/>
-        {children}
-      </div> */}
-      {/* <Content></Content> */}
+      {/* <Footer>Footer</Footer> */}
     </>
   )
 }

@@ -8,6 +8,15 @@
 *{
   font-family: "Poppins", sans-serif;
 }
+
+.text-55xl{
+  font-size: 3.5rem;
+}
+
+.text-custom{
+  color:#2768FD;
+}
+
 /* end font */
 
 /* general */
@@ -16,10 +25,12 @@
 }
 /* end general */
 
-/* button */
-
-
-/* end button */
+/* padding */
+.py-22{
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+/* end padding */
 
 
 /* border */
@@ -41,6 +52,8 @@
 
 /* end hover */
 
-
-/* animasi */
-/* end animasi */
+/* line-height */
+.leading-custom {
+  line-height: 2;
+}
+/* end line-height */
