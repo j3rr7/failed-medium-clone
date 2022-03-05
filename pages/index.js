@@ -1,13 +1,13 @@
 import Layout from '../components/layout';
 import Link from 'next/link';
 import Image from 'next/image';
-import bookHeader from '../public/assets/images/book.png';
-import iconGraph from '../public/assets/images/040-graph.svg';
-import { Divider } from 'antd';
+import { bookHeader, iconGraph } from '../components/images/images';
+import Trending from '../components/common/trendingCard';
 
 export default function Home() {
   return (
     <Layout>
+      {/* header */}
       <section className="header">
         <div className="flex h-4/5 px-3 justify-between">
           <div className="header-left py-14 w-full">
@@ -26,16 +26,20 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="header-right py-18 px-32 w-full">
+          <div className="header-right py-18 px-32 w-full hidden md:block">
             <Image src={bookHeader} width={512} height={512}/>
           </div>
           <hr/>
         </div>
       </section>
+      {/* end header */}
+      {/* trending */}
       <section className="px-3">
         <p className="text-lg font-normal text-custom"><Image src={iconGraph} width={20} height={20}/> Trending</p>
         <div className="border-b-2 border-gray-100"></div>
+        <Trending/>
       </section>
+      {/* end trending */}
     </Layout>
   )
 }

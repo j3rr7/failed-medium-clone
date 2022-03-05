@@ -8,6 +8,10 @@ import logo from '../../public/assets/images/logo.png'
 export default function Items(){
   const router = useRouter();
   const [flyer, setFlyer] = useState(false);
+  // profile
+  const profile = true;
+  const profileActive = true;
+  // end profile
   return(
     <>
       <nav className="nav flex flex-wrap items-center justify-between px-4">
@@ -64,21 +68,41 @@ export default function Items(){
                   </a>
                 </Link>
               </li>
-              <li>
-                <Link href="/auth/signin">
-                  <a className={router.pathname === "/auth/signin" ? styleNav.active : "md:p-4 py-3 px-0 block font-normal center hover:color-primary"}>
-                    Sign in
-                  </a>
-                </Link>
-              </li>
-              <li>
-                
-                <Link href="/auth/signup">
-                  <a className="mx-3 bg-primary btn-custom relative block text-white px-3 py-2 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary">
-                    Get Started
-                  </a>
-                </Link>
-              </li>
+              {
+                profile ? (
+                  <>
+                    <li>
+                      <Link href="/auth/signin">
+                        <div className="mx-3 rounded-full px-0 bg-gray-300 relative w-8 h-8">
+                          <img src="http://source.unsplash.com/100x100/?woman" class="rounded-full bg-cover bg-no-repeat"/>
+                          <div className={profileActive ? (
+                            "absolute right-0 bottom-0 w-3 h-3 rounded-full bg-green-500"
+                          ) : (
+                            "absolute right-0 bottom-0 w-3 h-3 rounded-full bg-red-500"
+                          )}></div>
+                        </div>
+                      </Link>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li>
+                      <Link href="/auth/signin">
+                        <a className={router.pathname === "/auth/signin" ? styleNav.active : "md:p-4 py-3 px-0 block font-normal center hover:color-primary"}>
+                          Sign in
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/auth/signup">
+                        <a className="mx-3 bg-primary btn-custom relative block text-white px-3 py-2 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary">
+                          Get Started
+                        </a>
+                      </Link>
+                    </li>
+                  </>
+                )
+              }
             </ul>
           </nav>
         </div>

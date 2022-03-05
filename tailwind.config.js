@@ -1,6 +1,8 @@
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}","./components/**/*.{js,ts,jsx,tsx}",],
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
   presets: [],
   darkMode: "class", // or 'class'
   theme: {
