@@ -23,6 +23,9 @@
 .bg-primary{
   background-color: #2768FD;
 }
+.bg-primary-100{
+  background-color: #2767fd1e;
+}
 
 .h-68{
   height: 16.5rem;
@@ -52,6 +55,9 @@
 
 .hover\/color-primary{
   color: #2768FD;
+}
+.hover\/bg-primary-100{
+  background-color: #2767fd1e;
 }
 
 /* end hover */

@@ -1,8 +1,9 @@
 import Layout from '../components/layout';
 import Link from 'next/link';
 import Image from 'next/image';
-import { bookHeader, iconGraph } from '../components/images/images';
+import { iconGraph } from '../components/images/images';
 import Trending from '../components/common/trendingCard';
+import Article from '../components/common/Article';
 
 export default function Home() {
   return (
@@ -26,8 +27,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="header-right py-18 px-32 w-full hidden md:block">
-            <Image src={bookHeader} width={512} height={512}/>
+          <div className="header-right w-full hidden md:flex lg:w-full md:w-1/2">
+            <img src="/assets/images/book.png" alt='img-header' className="mx-auto object-contain"/>
           </div>
           <hr/>
         </div>
@@ -40,6 +41,12 @@ export default function Home() {
         <Trending/>
       </section>
       {/* end trending */}
+      {/* article */}
+      <section className="px-3 mt-16 border-2">
+        <div className="border-b-2 border-gray-100"></div>
+        <Article/>
+      </section>
+      {/* end article */}
     </Layout>
   )
 }
