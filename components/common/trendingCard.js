@@ -5,7 +5,7 @@ import { g_1, g_2, g_3, g_4, g_5, g_6 } from '../images/images';
 export default function trendingCard() {
   return (
     <>
-      <div className="flex flex-wrap w-full h-96 my-4 md:my-14 md:max-h-60">
+      <div className="flex flex-wrap w-full h-auto my-4 md:my-8 md:max-h-auto">
 
         <div className="lg:w-1/3 max-h-30 md:w-2/4 sm:w-full flex justify-around hover:shadow-lg transition-all">
           <div className="py-2 px-1 w-auto">

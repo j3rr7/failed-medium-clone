@@ -42,7 +42,7 @@ export default function Home() {
       </section>
       {/* end trending */}
       {/* article */}
-      <section className="px-3 mt-16 border-2">
+      <section className="px-3">
         <div className="border-b-2 border-gray-100"></div>
         <Article/>
       </section>
