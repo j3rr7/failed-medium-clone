@@ -53,11 +53,14 @@
 
 /* hover */
 
-.hover\/color-primary{
+.hover\:color-primary:hover{
   color: #2768FD;
 }
-.hover\/bg-primary-100{
+.hover\:bg-primary-100:hover{
   background-color: #2767fd1e;
+}
+.hover\:bg-primary:hover{
+  background-color: #2768FD;
 }
 
 /* end hover */
