@@ -36,3 +36,6 @@ yarn-error.log*
 
 # Jetbrain
 .idea
+
+# Ignore Global Tailkwind Style
+/styles/globals.css
