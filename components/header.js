@@ -1,14 +1,11 @@
-import Header from "../components/Header";
-import Link from 'next/link';
-import Image from 'next/image';
-import {iconGraph} from '../components/images/images';
-import Trending from '../components/trending';
-import Article from '../components/common/Article';
+import Image from "next/image";
+import Link from "next/link";
+import { bookHeader, iconGraph } from "./images/images"
+import Trending from "./trending";
 
-export default function Home() {
+export default function Header({props}) {
     return (
         <>
-            {/* header */}
             <section className="header">
                 <div className="flex h-4/5 px-3 justify-between">
                     <div className="header-left py-14 w-full">
@@ -28,27 +25,20 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="header-right w-full hidden md:flex lg:w-full md:w-1/2">
-                        <img src="/assets/images/book.png" alt='img-header' className="mx-auto object-contain"/>
+                    <div className="header-right py-18 px-32 w-full hidden md:block">
+                        <Image src={bookHeader} width={512} height={512}/>
                     </div>
                     <hr/>
                 </div>
             </section>
-            {/* end header */}
-            {/* trending */}
             <section className="px-3">
-                <p className="text-lg font-normal text-custom"><Image src={iconGraph} width={20} height={20}/> Trending
+                <p className="text-lg font-normal text-custom">
+                    <Image src={iconGraph} width={20} height={20}/>
+                    Trending
                 </p>
                 <div className="border-b-2 border-gray-100"/>
-                <Trending/>
+                <Trending />
             </section>
-            {/* end trending */}
-            {/* article */}
-            <section className="px-3">
-                <div className="border-b-2 border-gray-100"/>
-                <Article/>
-            </section>
-            {/* end article */}
         </>
     )
 }

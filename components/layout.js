@@ -1,16 +1,18 @@
-import React from 'react'
-import HeadTags from './headTags'
-import Navbar from './navbar'
+import Navbar from "./navbar"
+import Footer from "./footer"
 
-export default function layout({children}) {
-  return (
-    <>
-      <HeadTags/>
-      <Navbar/>
-      <div className="container">
-        {children}
-      </div>
-      {/* <Footer>Footer</Footer> */}
-    </>
-  )
+export default function Layout({children}) {
+    return (
+        <>
+            <Navbar/>
+
+            <div className={"container"}>
+                <main>
+                    {children}
+                </main>
+            </div>
+
+            <Footer/>
+        </>
+    )
 }
