@@ -35,7 +35,7 @@ export default function Article() {
 
           {/* image */}
           <div className="img w-4/12">
-            <img src="http://source.unsplash.com/286x168/?woman" class="bg-cover bg-no-repeat object-cover"/>
+            <img src="http://source.unsplash.com/286x168/?woman" className={"bg-cover bg-no-repeat object-cover"}/>
           </div>
           {/* end image */}
         </div>
@@ -68,7 +68,7 @@ export default function Article() {
 
           {/* image */}
           <div className="img w-4/12">
-            <img src="http://source.unsplash.com/286x168/?woman" class="bg-cover bg-no-repeat object-cover"/>
+            <img src="http://source.unsplash.com/286x168/?woman" className={"bg-cover bg-no-repeat object-cover"}/>
           </div>
           {/* end image */}
         </div>

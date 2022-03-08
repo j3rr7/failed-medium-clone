@@ -1,4 +1,3 @@
-
 import Menu from '../components/common/Menu';
 export default function navbar() {
   return (
