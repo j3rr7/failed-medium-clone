@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Carousel from '../components/common/Carousel'
 import Link from 'next/link';
 import Image from 'next/image';
 import {iconGraph} from '../components/images/images';
@@ -22,14 +22,14 @@ export default function Home() {
                         <p className="text-xl font-light">pemikiran kami untuk Anda</p>
                         <div className="mt-4">
                             <Link href="#">
-                                <a className="px-4 bg-primary text-xl text-white py-1 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary">Let's
+                                <a className="px-4 bg-primary text-xl text-white py-1 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary hover:color-primary">Let's
                                     started</a>
                             </Link>
                         </div>
                     </div>
 
-                    <div className="header-right w-full hidden md:flex lg:w-full md:w-1/2">
-                        <img src="/assets/images/book.png" alt='img-header' className="mx-auto object-contain"/>
+                    <div className="header-right hidden md:flex md:w-1/2 md:items-center">
+                        <Carousel/>
                     </div>
                     <hr/>
                 </div>

@@ -1,34 +1,35 @@
 import React from 'react'
-import Image from 'next/image'
-import { Carousel } from 'antd'
-import image1 from '../../public/assets/images/c-1.png'
-import image2 from '../../public/assets/images/c-2.png'
-import image3 from '../../public/assets/images/c-3.png'
-import image4 from '../../public/assets/images/c-4.png'
-
-const contentStyle = {
-  height: '50vh',
-  color: '#000',
-  backgroundSize: 'cover',
-  textAlign: 'center',
-  background: '#FFF',
-};
+// Import Swiper React components
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 export default function CarouselComponent() {
   return (
-    <Carousel autoplay>
-      <div>
-        <Image src={image1} alt="Carousel 1" style={contentStyle}/>
-      </div>
-      <div>
-        <Image src={image2} alt="Carousel 2" style={contentStyle}/>
-      </div>
-      <div>
-        <Image src={image3} alt="Carousel 3" style={contentStyle}/>
-      </div>
-      <div>
-        <Image src={image4} alt="Carousel 4" style={contentStyle}/>
-      </div>
-    </Carousel>
+    <>
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={100}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+      >
+        <SwiperSlide>
+          <img src="/assets/images/book.png" alt='img-header' className="mx-auto object-contain"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="/assets/images/cassette.png" alt='img-header' className="mx-auto object-contain"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="/assets/images/television.png" alt='img-header' className="mx-auto object-contain"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="/assets/images/typewriter.png" alt='img-header' className="mx-auto object-contain"/>
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 }

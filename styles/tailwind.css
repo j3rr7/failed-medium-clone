@@ -70,3 +70,10 @@
   line-height: 2;
 }
 /* end line-height */
+.w-custom {
+  width: 100%;
+}
+
+.h-custom{
+  height: 10rem;
+}

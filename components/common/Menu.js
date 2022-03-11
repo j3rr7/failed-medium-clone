@@ -123,7 +123,7 @@ export default function Items() {
                                         </li>
                                         <li>
                                             <Link href="/auth/signup">
-                                                <a className="mx-3 bg-primary btn-custom relative block text-white px-3 py-2 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary">
+                                                <a className="mx-3 bg-primary btn-custom relative block text-white px-3 py-2 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary hover:color-primary">
                                                     Get Started
                                                 </a>
                                             </Link>
