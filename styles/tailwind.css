@@ -12,9 +12,20 @@
 .text-55xl{
   font-size: 3.5rem;
 }
-
 .text-custom{
   color:#2768FD;
+}
+.text-twitter{
+  color: #1d9bf0;
+}
+.text-google{
+  color: #E94235;
+}
+.text-github{
+  color: #1A1D21;
+}
+.text-apple{
+  color: #141414;
 }
 
 /* end font */
@@ -26,7 +37,9 @@
 .bg-primary-100{
   background-color: #2767fd1e;
 }
-
+.bg-apple{
+  background-color: #141414;
+}
 .h-68{
   height: 16.5rem;
 }
@@ -45,6 +58,9 @@
 .hover\:border-color-primary:hover{
   border-color: #2768FD;
 }
+.focus\:border-color-primary:focus{
+  border-color: #2768FD;
+}
 .hover\:border-1:hover {
   border-width: 1px;
 }
@@ -56,13 +72,30 @@
 .hover\:color-primary:hover{
   color: #2768FD;
 }
+.hover\:color-primary-100:hover{
+  color: #2767fdc4;
+}
 .hover\:bg-primary-100:hover{
   background-color: #2767fd1e;
 }
 .hover\:bg-primary:hover{
   background-color: #2768FD;
 }
-
+.hover\:bg-twitter:hover{
+  background-color: #1d9bf0;
+}
+.hover\:bg-google:hover{
+  background-color: #E94235;
+}
+.hover\:bg-github:hover{
+  background-color: #1A1D21;
+}
+.hover\:bg-apple:hover{
+  background-color: #141414;
+}
+.hover\:text-apple:hover{
+  color:#FFFFFF;
+}
 /* end hover */
 
 /* line-height */
@@ -73,7 +106,6 @@
 .w-custom {
   width: 100%;
 }
-
 .h-custom{
   height: 10rem;
 }
