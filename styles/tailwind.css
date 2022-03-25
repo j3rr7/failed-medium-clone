@@ -55,6 +55,9 @@
 
 /* border */
 
+.border-color-primary{
+  border-color: #2768FD;
+}
 .hover\:border-color-primary:hover{
   border-color: #2768FD;
 }
@@ -64,7 +67,6 @@
 .hover\:border-1:hover {
   border-width: 1px;
 }
-
 .border-r-1{
   border-right-width: 1px;
 }
