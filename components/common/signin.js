@@ -2,19 +2,30 @@ import React, { useState } from 'react'
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
-export default function signin() {
+import { getCsrfToken, signIn, useSession } from "next-auth/react"
 
-  const [email, setEmail] = useState('');
-  const onSubmit = (e) => {
-    e.prevendDefault();
+export async function getServerSideProps(context) {
+  const csrfToken = await getCsrfToken(context)
+  return {
+    props: { csrfToken },
   }
+}
+
+export default function signin({ csrfToken }) {
+  const [email, setEmail] = useState('');
+
+  const SubmitEvent = (e) => {
+    signIn("email", { email: email });
+  }
+
   return (
     <div className="mt-14 px-12 sm:px-12 md:px-12 lg:px-12 xl:px-12 lg:mt-14 xl:max-w-2xl">
       <h2 className="text-center text-4xl font-semibold lg:text-left xl:text-5xl xl:font-bold">Sign In</h2>
       <div className="mt-12">
 
         {/* form */}
-        <form onSubmit={onSubmit}>
+        <form method="post" action="/api/auth/signin/email">
+          <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
           <div>
             <div className="text-sm font-bold text-gray-700 tracking-wide">Email Address</div>
             <input 
@@ -22,32 +33,31 @@ export default function signin() {
               placeholder="JohnDoe@gmail.com"
               type="email"
               name="email"
-              value={email}
               id="email"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mt-10">
-            <button className="w-full bg-primary text-gray-100 font-semibold tracking-wide py-4 text-lg rounded-full focus:outline-none shadow-lg">
+            <button type="submit" className="w-full bg-primary text-gray-100 font-semibold tracking-wide py-4 text-lg rounded-full focus:outline-none shadow-lg">
               Sign In
             </button>
           </div>
           <div className="flex justify-end">
             <p className="mr-2 text-base mt-2">No Account?</p>
-            <Link href="/Auth/signup">
+            <Link href="/auth/signup">
               <a className="text-base mt-2 font-semibold hover:color-primary">Create One</a>
             </Link>
           </div>
         </form>
         {/* end form */}
-
       </div>
 
       <div className="mt-10">
         <div className="flex justify-center">
-          <div className="w-full border-t border-gray-300 px-2 mt-2"></div>
+          <div className="w-full border-t border-gray-300 px-2 mt-2" />
           <p className="text-base px-5 tracking-wide text-gray-300 font-normal leading-3">or</p>
-          <div className="w-full border-t border-gray-300 px-2 mt-2"></div>
+          <div className="w-full border-t border-gray-300 px-2 mt-2" />
         </div>
       </div>
       <div className="mt-10">

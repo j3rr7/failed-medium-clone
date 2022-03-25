@@ -115,14 +115,14 @@ export default function Items() {
                                 ) : (
                                     <>
                                         <li>
-                                            <Link href="/Auth/signin">
-                                                <a className={router.query.route === "/Auth/signin" ? styleNav.active : "md:p-4 py-3 px-0 block font-normal center hover:color-primary"}>
+                                            <Link href="/auth/signin">
+                                                <a className={router.query.route === "/auth/signin" ? styleNav.active : "md:p-4 py-3 px-0 block font-normal center hover:color-primary"}>
                                                     Sign in
                                                 </a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/Auth/signup">
+                                            <Link href="/auth/signup">
                                                 <a className="mx-3 bg-primary btn-custom relative block text-white px-3 py-2 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary hover:color-primary">
                                                     Get Started
                                                 </a>

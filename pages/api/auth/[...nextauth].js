@@ -24,4 +24,9 @@ export default NextAuth({
     //   clientSecret: process.env.GOOGLE_CLIENT_SECRET
     // })
   ],
+  pages: {
+    signIn: "/auth/sigin",
+    callbackUrl: "/auth/callback",
+  },
+  database: process.env.MONGODB_URI,
 })
