@@ -10,7 +10,7 @@ export default function Items() {
     const [flyer, setFlyer] = useState(false);
 
     // profile
-    const profile = false;
+    const profile = true;
     const profileActive = true;
     // end profile
 
