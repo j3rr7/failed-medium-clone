@@ -39,3 +39,4 @@ yarn-error.log*
 
 # Ignore Global Tailkwind Style
 /styles/globals.css
+styles/globals.css
