@@ -37,6 +37,9 @@
 .bg-primary-100{
   background-color: #2767fd1e;
 }
+.bg-third{
+  background-color: #E1F0FF;
+}
 .bg-apple{
   background-color: #141414;
 }
@@ -64,11 +67,12 @@
 .hover\:border-1:hover {
   border-width: 1px;
 }
-
 .border-r-1{
   border-right-width: 1px;
 }
-
+.border-l-1{
+  border-left-width: 1px;
+}
 .border-b-1{
   border-block-width: 1px;
 }
