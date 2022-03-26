@@ -4,11 +4,12 @@ import Image from 'next/image'
 import {useRouter} from 'next/router'
 import styleNav from './MenuStyle.module.css'
 import logo from '../../public/assets/images/logo.png'
+import { Icon } from '@iconify/react';
 
 export default function Items() {
     const router = useRouter();
     const [flyer, setFlyer] = useState(false);
-
+    const [hoverCard, setHoverCard] = useState(false);
     // profile
     const profile = true;
     const profileActive = true;
@@ -100,14 +101,20 @@ export default function Items() {
                                     <>
                                         <li>
                                             <Link href="/auth/signin">
-                                                <div className="mx-3 rounded-full px-0 bg-gray-300 relative w-8 h-8">
-                                                    <img src="http://source.unsplash.com/100x100/?woman"
-                                                         className={"rounded-full bg-cover bg-no-repeat"}/>
+                                                <div 
+                                                    className="mx-3 rounded-full px-0 bg-gray-300 relative w-8 h-8"
+                                                    onMouseEnter={() => setHoverCard(!hoverCard)}
+                                                >
+                                                    <img 
+                                                        src="http://source.unsplash.com/100x100/?woman"
+                                                        className={"rounded-full bg-cover bg-no-repeat"}
+                                                    />
                                                     <div className={profileActive ? (
-                                                        "absolute right-0 bottom-0 w-3 h-3 rounded-full bg-green-500"
-                                                    ) : (
-                                                        "absolute right-0 bottom-0 w-3 h-3 rounded-full bg-red-500"
-                                                    )}/>
+                                                            "absolute right-0 bottom-0 w-3 h-3 rounded-full bg-green-500"
+                                                        ) : (
+                                                            "absolute right-0 bottom-0 w-3 h-3 rounded-full bg-red-500"
+                                                        )}
+                                                    />
                                                 </div>
                                             </Link>
                                         </li>
@@ -132,6 +139,50 @@ export default function Items() {
                                 )
                             }
                         </ul>
+
+                        <div 
+                            onMouseLeave={() => setHoverCard(false)}
+                            className={
+                                hoverCard ? 
+                                "bg-white absolute w-auto right-52 z-40 shadow-md block translate-y-2 transition ease-in-out duration-200 rounded-md": 
+                                "bg-white absolute w-auto right-52 z-40 shadow-md hidden"
+                            }
+                        >
+                            
+                            <div className="flex flex-col px-4">
+                                <a className="flex px-2 py-2 hover:color-primary">
+                                    <Icon icon="iconoir:profile-circled" width="25" height="25" />
+                                    <p className="text-base px-4">Profile</p>
+                                </a>
+
+                                <div className="border-b-2 mt-2 hover:color-primary"></div>
+
+                                <a className="flex px-2 mt-5 hover:color-primary">
+                                    <Icon icon="ant-design:line-outlined" width="15" height="15" />
+                                    <p className="text-sm px-4 leading-3">Settings</p>
+                                </a>
+                                <a className="flex px-2 mt-4 hover:color-primary">
+                                    <Icon icon="ant-design:line-outlined" width="15" height="15"/>
+                                    <p className="text-sm px-4 leading-3">Stats</p>
+                                </a>
+                                <a className="flex px-2 mt-4 hover:color-primary">
+                                    <Icon icon="ant-design:line-outlined" width="15" height="15"/>
+                                    <p className="text-sm px-4 leading-3">Manage publications</p>
+                                </a>
+                                <a className="flex px-2 mt-4 hover:color-primary">
+                                    <Icon icon="ant-design:line-outlined" width="15" height="15"/>
+                                    <p className="text-sm px-4 leading-3">Refine recommendations</p>
+                                </a>
+
+                                <div className="border-b-2 mt-6 hover:color-primary"></div>
+
+                                <a className="flex px-2 my-4 hover:color-primary">
+                                    <Icon  icon="fa:sign-out" width="25" height="25"/>
+                                    <p className="text-base px-4">Sign out</p>
+                                </a>
+                            </div>
+                        </div>
+
                     </nav>
                 </div>
             </nav>
