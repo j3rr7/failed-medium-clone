@@ -11,7 +11,7 @@ export default function Items() {
     const [flyer, setFlyer] = useState(false);
     const [hoverCard, setHoverCard] = useState(false);
     // profile
-    const profile = true;
+    const profile = false;
     const profileActive = true;
     // end profile
 
@@ -83,8 +83,8 @@ export default function Items() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/ourstory">
-                                    <a className={router.pathname === "/ourstory" ? styleNav.active : "md:p-4 py-3 px-0 block font-normal center hover:color-primary"}>
+                                <Link href="/home">
+                                    <a className={router.pathname === "/home" ? styleNav.active : "md:p-4 py-3 px-0 block font-normal center hover:color-primary"}>
                                         Our story
                                     </a>
                                 </Link>
@@ -122,14 +122,14 @@ export default function Items() {
                                 ) : (
                                     <>
                                         <li>
-                                            <Link href="/auth/signin">
-                                                <a className={router.query.route === "/auth/signin" ? styleNav.active : "md:p-4 py-3 px-0 block font-normal center hover:color-primary"}>
+                                            <Link href="/login">
+                                                <a className={router.pathname === "/auth/login" ? styleNav.active : "md:p-4 py-3 px-0 block font-normal center hover:color-primary"}>
                                                     Sign in
                                                 </a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/auth/signup">
+                                            <Link href="/register">
                                                 <a className="mx-3 bg-primary btn-custom relative block text-white px-3 py-2 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary hover:color-primary">
                                                     Get Started
                                                 </a>

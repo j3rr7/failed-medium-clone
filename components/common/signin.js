@@ -45,7 +45,7 @@ export default function signin({ csrfToken }) {
           </div>
           <div className="flex justify-end">
             <p className="mr-2 text-base mt-2">No Account?</p>
-            <Link href="/auth/signup">
+            <Link href="/register">
               <a className="text-base mt-2 font-semibold hover:color-primary">Create One</a>
             </Link>
           </div>

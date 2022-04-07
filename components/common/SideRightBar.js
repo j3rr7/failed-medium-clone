@@ -1,12 +1,18 @@
 import React from 'react'
 import { Icon } from '@iconify/react';
-import Category from './Category'
+import Category from './Category';
+import Link from 'next/link';
 
 export default function SideRightBar() {
   return (
     <div className="h-screen border-l-1">
       <div className="ml-6">
-        <button className="mt-12 bg-black text-white text-sm font-normal py-2 w-full rounded-full hover:bg-apple">Upgrade</button>
+        <div className="flex justify-between">
+          <button className="mt-12 bg-black text-white text-sm font-normal py-2 w-full rounded-full hover:bg-apple">Upgrade</button>
+          <Link href="/login">
+            <a className="px-4 mt-12 w-28 flex items-center">Sign in</a>
+          </Link>
+        </div>
       </div>
       <div className="ml-6 mt-12 flex justify-between ">
         <label className="relative block">

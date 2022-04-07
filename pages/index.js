@@ -23,7 +23,7 @@ export default function Home() {
                         <p className="text-xl font-light">menarik maupun dari</p>
                         <p className="text-xl font-light">pemikiran kami untuk Anda</p>
                         <div className="mt-4">
-                        <Link href="/auth/signup">
+                        <Link href="/login">
                             <a className="px-4 bg-primary text-xl text-white py-1 rounded-full tracking-widest hover:tracking-widest hover:bg-transparent hover:border-1 hover:border-color-primary hover:color-primary">Let's
                             started
                             </a>

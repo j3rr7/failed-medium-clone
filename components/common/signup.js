@@ -51,7 +51,7 @@ export default function signup() {
           </div>
           <div className="flex justify-end">
             <p className="mr-2 text-base mt-2">Already have an account?</p>
-            <Link href="/auth/signin">
+            <Link href="/login">
               <a className="text-base mt-2 font-semibold hover:color-primary">Sign In</a>
             </Link>
           </div>
